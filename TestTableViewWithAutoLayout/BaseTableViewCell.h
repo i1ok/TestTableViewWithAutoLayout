@@ -10,7 +10,7 @@
 
 @class Event;
 
-@interface TableViewCell : UITableViewCell
+@interface BaseTableViewCell : UITableViewCell
 
 - (void)setupWithModel:(Event *)event;
 
@@ -18,17 +18,17 @@
 
 
 
-@interface EventImageCell : TableViewCell
-@property (weak, nonatomic, readonly) IBOutlet UIImageView *imageView;
+@interface EventImageCell : BaseTableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *eventImageView;
 
 @end
 
-@interface EventNameCell : TableViewCell
+@interface EventNameCell : BaseTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 
 @end
 
-@interface EventDescriptionCell : TableViewCell
+@interface EventDescriptionCell : BaseTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
 
 @end

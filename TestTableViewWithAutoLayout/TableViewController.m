@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "TableViewCell.h"
+#import "BaseTableViewCell.h"
 #import "Event.h"
 
 @interface TableViewController ()
@@ -58,7 +58,9 @@
         identifier = @"EventDescriptionCell";
     }
     
-    TableViewCell *cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    
     
     // Configure the cell...
     Event *event = [[Event alloc] init];

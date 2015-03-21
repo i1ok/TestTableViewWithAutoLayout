@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Keita Ito. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "BaseTableViewCell.h"
 #import "Event.h"
 
-@implementation TableViewCell
+@implementation BaseTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -33,7 +33,7 @@
 - (void)setupWithModel:(Event *)event
 {
     NSString *string = event.eventImageName;
-    self.imageView.image = [UIImage imageNamed:string];
+    self.eventImageView.image = [UIImage imageNamed:string];
 }
 
 //- (void)layoutSubviews{
